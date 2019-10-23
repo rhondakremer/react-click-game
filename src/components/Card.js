@@ -1,14 +1,13 @@
 import React from "react";
 
-function PuppyCard(props) {
-    return (
+
+const PuppyCard = (props) => (
       <div className="card">
         <div className="img-container">
-          <img alt={props.name} src={props.image} />
+          <img alt={props.name} src={props.image} onClick={() => props.onClick(props.id)} />
         </div>
       </div>
     );
-  }
   
   export default PuppyCard;
   

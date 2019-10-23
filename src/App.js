@@ -5,20 +5,36 @@ import puppies from "./cards.json";
 import './App.css';
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+
   state = {
-    puppies
+    puppies,
+    score: 0,
+    highScore: 0
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  clickEvent = (id, clicked) => {
+    this.setState({
+      puppies:this.state.puppies.map(puppy => {
+        if (puppy.id===id) {
+          puppy.clicked = true;
+        }
+        return puppy;
+      })
+    })
+    alert("you are clicked!" + id + clicked);
+  };
+
+  // Map over this.state.puppies and render a PuppyCard component for each puppy object
   render() {
     return (
       <Wrapper>
-        {this.state.puppies.map(friend => (
+        {this.state.puppies.map(puppy => (
           <PuppyCard
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
+            id={puppy.id}
+            key={puppy.id}
+            image={puppy.image}
+            clicked={puppy.clicked}
+            onClick={this.clickEvent}
           />
         ))}
       </Wrapper>
