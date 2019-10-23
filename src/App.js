@@ -13,10 +13,14 @@ class App extends Component {
   };
 
   clickEvent = (id) => {
+    
     this.setState({
       puppies:this.state.puppies.map(puppy => {
-        if (puppy.id===id) {
+        if (puppy.id === id && puppy.clicked === false) {
           puppy.clicked = true;
+        }
+        else if (puppy.id===id && puppy.clicked === true) {
+          alert("you already clicked this puppy!")
         }
         return puppy;
       })
