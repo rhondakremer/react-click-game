@@ -12,7 +12,7 @@ class App extends Component {
     highScore: 0
   };
 
-  clickEvent = (id, clicked) => {
+  clickEvent = (id) => {
     this.setState({
       puppies:this.state.puppies.map(puppy => {
         if (puppy.id===id) {
@@ -21,7 +21,6 @@ class App extends Component {
         return puppy;
       })
     })
-    alert("you are clicked!" + id + clicked);
   };
 
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
