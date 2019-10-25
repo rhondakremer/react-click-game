@@ -17,11 +17,12 @@ class App extends Component {
   clickEvent = (id) => {
     //alert("this is the click event");
     this.puppyClicked(id);
+    this.shufflePuppies();
   }
 
   puppyClicked = (id) => {
     this.setState({
-      puppies:this.state.puppies.map(puppy => {
+      puppies:puppies.map(puppy => {
         if (puppy.id === id && puppy.clicked === "false") {
           puppy.clicked = "true";
           //alert("you clicked this puppy");
@@ -29,7 +30,7 @@ class App extends Component {
           //this.randomizeArray(puppies)
         }
         else if (puppy.id===id && puppy.clicked === "true") {
-          //alert("this puppy has already been clicked")
+          this.gameOver();
         }
         return puppy;
       }) 
@@ -42,13 +43,6 @@ class App extends Component {
     this.checkHighScore());
   }
 
-  // componentDidUpdate = (prevProps) => {
-  //   if (this.props.score !== prevProps.score) {
-  //     this.fetchData(this.props.score);
-  //     this.checkHighScore();
-  //   }
-  // }
-
   randomizeArray = (arr) => {
     return arr.sort((a,b)=>Math.floor(Math.random()*1000)>500?1:-1);
   }
@@ -57,10 +51,25 @@ class App extends Component {
     if (this.state.score > this.state.highScore) {
       this.setState({highScore: this.state.score});
     }
+    if (this.state.score === 12) {
+      alert("You win!")
+      this.restartGame();
+    }
+  }
+
+  shufflePuppies = () => {
+    this.setState({ puppies: this.randomizeArray(this.state.puppies)});
+        console.log("Shuffling Pups");
   }
 
   gameOver = () => {
     // reset all puppy clicked to false and score is 0
+    alert("game over, loser!")
+    this.restartGame();
+  }
+
+  restartGame = () => {
+    this.setState({score:0, puppies:puppies.map(puppy => puppy.clicked=false)});
   }
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
   render() {
@@ -69,7 +78,7 @@ class App extends Component {
       <Wrapper>
         <Header score={this.state.score} highScore={this.state.highScore} />
         <CardWrapper>
-        {this.state.puppies.map(puppy => (
+        {puppies.map(puppy => (
           <PuppyCard
             id={puppy.id}
             key={puppy.id}
