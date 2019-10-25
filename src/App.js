@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   puppyClicked = (id) => {
-    
     this.setState({
       puppies:this.state.puppies.map(puppy => {
         if (puppy.id === id && puppy.clicked === "false") {
@@ -39,16 +38,23 @@ class App extends Component {
 
   updateScore = () => {
     // set the new score
-    this.setState({score: this.state.score + 1});
-    this.checkHighScore();
+    this.setState({score: this.state.score + 1}, () =>
+    this.checkHighScore());
   }
+
+  // componentDidUpdate = (prevProps) => {
+  //   if (this.props.score !== prevProps.score) {
+  //     this.fetchData(this.props.score);
+  //     this.checkHighScore();
+  //   }
+  // }
 
   randomizeArray = (arr) => {
     return arr.sort((a,b)=>Math.floor(Math.random()*1000)>500?1:-1);
   }
 
   checkHighScore = () => {
-    if (this.state.score >= this.state.highScore) {
+    if (this.state.score > this.state.highScore) {
       this.setState({highScore: this.state.score});
     }
   }
