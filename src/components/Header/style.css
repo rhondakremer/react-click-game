@@ -5,6 +5,14 @@
     margin-top: auto;
 }
 
+h1 {
+    line-height: 80px;
+}
+
 p {
     text-align: center
+}
+
+h5 {
+    text-align: center;
 }

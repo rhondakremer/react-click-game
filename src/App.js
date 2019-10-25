@@ -69,12 +69,11 @@ class App extends Component {
   }
 
   restartGame = () => {
-    this.setState({score:0, puppies:puppies.map(puppy => puppy.clicked=false)});
+    this.setState({score:0, puppies:puppies.map(puppy => puppy.clicked="false")});
   }
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
   render() {
     return (
-      
       <Wrapper>
         <Header score={this.state.score} highScore={this.state.highScore} />
         <CardWrapper>
