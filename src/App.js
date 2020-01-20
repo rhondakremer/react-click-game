@@ -74,8 +74,9 @@ class App extends Component {
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
   render() {
     return (
-      <Wrapper>
-        <Header score={this.state.score} highScore={this.state.highScore} />
+      <div>
+      <Header score={this.state.score} highScore={this.state.highScore} />
+        <Wrapper>
         <CardWrapper>
         {puppies.map(puppy => (
           <PuppyCard
@@ -88,6 +89,7 @@ class App extends Component {
         ))}
       </CardWrapper>
       </Wrapper>
+      </div>
     );
   }
 }
