@@ -1,6 +1,6 @@
 This application renders numerous puppy pictures in the DOM. When a single image is clicked, all images shuffle. The goal of the game is to click each picture once with no repeats. If you click an image twice, the score resets and the game starts over. Current and high scores are recorded during the session.
 
-![Screenshot of game play](/images/screenshot.png)
+![Screenshot of game play](/src/images/screenshot.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
