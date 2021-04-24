@@ -22,12 +22,10 @@ class App extends Component {
 
   puppyClicked = (id) => {
     this.setState({
-      puppies:puppies.map(puppy => {
+      puppies: puppies.map(puppy => {
         if (puppy.id === id && puppy.clicked === "false") {
           puppy.clicked = "true";
-          //alert("you clicked this puppy");
           this.updateScore();
-          //this.randomizeArray(puppies)
         }
         else if (puppy.id===id && puppy.clicked === "true") {
           this.gameOver();
@@ -44,7 +42,7 @@ class App extends Component {
   }
 
   randomizeArray = (arr) => {
-    return arr.sort((a,b)=>Math.floor(Math.random()*1000)>500?1:-1);
+    return arr.sort(() => Math.floor(Math.random() * 1000) > 500 ? 1 : -1);
   }
 
   checkHighScore = () => {
@@ -71,23 +69,24 @@ class App extends Component {
   restartGame = () => {
     this.setState({score:0, puppies:puppies.map(puppy => puppy.clicked="false")});
   }
+
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
   render() {
     return (
       <div>
       <Header score={this.state.score} highScore={this.state.highScore} />
         <Wrapper>
-        <CardWrapper>
-        {puppies.map(puppy => (
-          <PuppyCard
-            id={puppy.id}
-            key={puppy.id}
-            image={puppy.image}
-            clicked={puppy.clicked}
-            onClick={this.clickEvent}
-          />
-        ))}
-      </CardWrapper>
+          <CardWrapper>
+          {puppies.map(puppy => (
+            <PuppyCard
+              id={puppy.id}
+              key={puppy.id}
+              image={puppy.image}
+              clicked={puppy.clicked}
+              onClick={this.clickEvent}
+            />
+          ))}
+        </CardWrapper>
       </Wrapper>
       </div>
     );

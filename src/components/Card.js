@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const PuppyCard = (props) => (
       <div className="card">
         <div className="img-container">
