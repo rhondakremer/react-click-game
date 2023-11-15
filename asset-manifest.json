@@ -1,20 +1,30 @@
 {
   "files": {
     "main.css": "/react-click-game/static/css/main.cd062e95.chunk.css",
-    "main.js": "/react-click-game/static/js/main.3e95e8e4.chunk.js",
-    "main.js.map": "/react-click-game/static/js/main.3e95e8e4.chunk.js.map",
+    "main.js": "/react-click-game/static/js/main.0526b3b4.chunk.js",
+    "main.js.map": "/react-click-game/static/js/main.0526b3b4.chunk.js.map",
     "runtime-main.js": "/react-click-game/static/js/runtime-main.2b1fd9f7.js",
     "runtime-main.js.map": "/react-click-game/static/js/runtime-main.2b1fd9f7.js.map",
-    "static/js/2.af36e645.chunk.js": "/react-click-game/static/js/2.af36e645.chunk.js",
-    "static/js/2.af36e645.chunk.js.map": "/react-click-game/static/js/2.af36e645.chunk.js.map",
+    "static/js/2.a5ca014f.chunk.js": "/react-click-game/static/js/2.a5ca014f.chunk.js",
+    "static/js/2.a5ca014f.chunk.js.map": "/react-click-game/static/js/2.a5ca014f.chunk.js.map",
     "index.html": "/react-click-game/index.html",
     "static/css/main.cd062e95.chunk.css.map": "/react-click-game/static/css/main.cd062e95.chunk.css.map",
-    "static/js/2.af36e645.chunk.js.LICENSE.txt": "/react-click-game/static/js/2.af36e645.chunk.js.LICENSE.txt"
+    "static/js/2.a5ca014f.chunk.js.LICENSE.txt": "/react-click-game/static/js/2.a5ca014f.chunk.js.LICENSE.txt",
+    "static/media/basset.1e8be665.jpg": "/react-click-game/static/media/basset.1e8be665.jpg",
+    "static/media/brown.749b1872.jpg": "/react-click-game/static/media/brown.749b1872.jpg",
+    "static/media/corgi.0ab9c668.jpg": "/react-click-game/static/media/corgi.0ab9c668.jpg",
+    "static/media/dalmation.bfb51f33.jpg": "/react-click-game/static/media/dalmation.bfb51f33.jpg",
+    "static/media/frenchie.f587e1e8.jpeg": "/react-click-game/static/media/frenchie.f587e1e8.jpeg",
+    "static/media/golden.0bd4d141.jpg": "/react-click-game/static/media/golden.0bd4d141.jpg",
+    "static/media/lassie.aadd5f91.jpg": "/react-click-game/static/media/lassie.aadd5f91.jpg",
+    "static/media/pittie.b89b15c2.jpeg": "/react-click-game/static/media/pittie.b89b15c2.jpeg",
+    "static/media/smug.02c8bf72.jpeg": "/react-click-game/static/media/smug.02c8bf72.jpeg",
+    "static/media/yawning.bb62c71f.png": "/react-click-game/static/media/yawning.bb62c71f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2b1fd9f7.js",
-    "static/js/2.af36e645.chunk.js",
+    "static/js/2.a5ca014f.chunk.js",
     "static/css/main.cd062e95.chunk.css",
-    "static/js/main.3e95e8e4.chunk.js"
+    "static/js/main.0526b3b4.chunk.js"
   ]
 }
