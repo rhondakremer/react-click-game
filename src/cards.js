@@ -15,62 +15,62 @@ const cards = [
     {
         "id": 1,
         "image": yawningPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 2,
         "image": frenchiePuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 3,
         "image": brownPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 4,
         "image": seaPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 5,
         "image": pittiePuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 6,
         "image": oldManPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 7,
         "image": smugPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 8,
         "image": goldenPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 9,
         "image": bassetPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 10,
         "image": lassiePuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 11,
         "image": dalmationPuppy,
-        "clicked": "false"
+        "clicked": false
     },
     {
         "id": 12,
         "image": corgiPuppy,
-        "clicked": "false"
+        "clicked": false
     }
 
 ]

@@ -21,10 +21,10 @@ class App extends Component {
   puppyClicked = (id) => {
     this.setState({
       puppies: cards.map((puppy) => {
-        if (puppy.id === id && puppy.clicked === "false") {
-          puppy.clicked = "true";
+        if (puppy.id === id && !puppy.clicked) {
+          puppy.clicked = true;
           this.updateScore();
-        } else if (puppy.id === id && puppy.clicked === "true") {
+        } else if (puppy.id === id && puppy.clicked === true) {
           this.gameOver();
         }
         return puppy;
@@ -63,7 +63,7 @@ class App extends Component {
   };
 
   restartGame = () => {
-    cards.forEach((puppy) => (puppy.clicked = "false"));
+    cards.forEach((puppy) => (puppy.clicked = false));
     this.setState({ score: 0, puppies: cards });
   };
 
