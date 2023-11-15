@@ -3,13 +3,13 @@ import PuppyCard from "./components/Card";
 import CardWrapper from "./components/CardWrapper";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper/";
-import puppies from "./cards.json";
+import cards from "./cards.js";
 import "./App.css";
 
 class App extends Component {
   state = {
     highScore: 0,
-    puppies: puppies,
+    puppies: cards,
     score: 0,
   };
 
@@ -20,7 +20,7 @@ class App extends Component {
 
   puppyClicked = (id) => {
     this.setState({
-      puppies: puppies.map((puppy) => {
+      puppies: cards.map((puppy) => {
         if (puppy.id === id && puppy.clicked === "false") {
           puppy.clicked = "true";
           this.updateScore();
@@ -63,8 +63,8 @@ class App extends Component {
   };
 
   restartGame = () => {
-    puppies.forEach((puppy) => (puppy.clicked = "false"));
-    this.setState({ score: 0, puppies });
+    cards.forEach((puppy) => (puppy.clicked = "false"));
+    this.setState({ score: 0, puppies: cards });
   };
 
   // Map over this.state.puppies and render a PuppyCard component for each puppy object
@@ -74,7 +74,7 @@ class App extends Component {
         <Header score={this.state.score} highScore={this.state.highScore} />
         <Wrapper>
           <CardWrapper>
-            {puppies.map((puppy) => (
+            {cards.map((puppy) => (
               <PuppyCard
                 id={puppy.id}
                 key={puppy.id}
