@@ -13,6 +13,10 @@ class App extends Component {
     score: 0,
   };
 
+  componentDidMount() {
+    this.shufflePuppies();
+  };
+
   clickEvent = (id) => {
     this.puppyClicked(id);
     this.shufflePuppies();
@@ -21,12 +25,14 @@ class App extends Component {
   puppyClicked = (id) => {
     this.setState({
       puppies: cards.map((puppy) => {
-        if (puppy.id === id && !puppy.clicked) {
-          puppy.clicked = true;
-          this.updateScore();
-        } else if (puppy.id === id && puppy.clicked === true) {
-          this.gameOver();
-        }
+        if (puppy.id === id) {
+          if (puppy.clicked) {
+            this.gameOver();
+          } else {
+            puppy.clicked = true;
+            this.updateScore();
+          };
+        };
         return puppy;
       }),
     });
@@ -63,7 +69,7 @@ class App extends Component {
   };
 
   restartGame = () => {
-    cards.forEach((puppy) => (puppy.clicked = false));
+    cards.forEach(puppy => puppy.clicked = false);
     this.setState({ score: 0, puppies: cards });
   };
 
