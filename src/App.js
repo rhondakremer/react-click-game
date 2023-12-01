@@ -52,7 +52,7 @@ class App extends Component {
       this.setState({ highScore: this.state.score });
     }
     if (this.state.score === 12) {
-      alert("You win!");
+      alert("You win!!");
       this.restartGame();
     }
   };
